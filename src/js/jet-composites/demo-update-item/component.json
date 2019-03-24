@@ -1,0 +1,33 @@
+{
+  "name": "demo-update-item",
+  "version": "1.0.0",
+  "jetVersion": "^6.0.0",
+  "displayName": "demo-update-item",
+  "description": "A Web Component with form layout",
+  "properties": {
+    "itemId": {
+      "type": "number"
+    },
+    "itemName": {
+      "type": "string",
+      "writeback": true
+    },
+    "itemPrice": {
+      "type": "number",
+      "writeback": true
+    },
+    "itemDesc": {
+      "type": "string",
+      "writeback": true
+    }
+  },
+  "methods": {
+
+  }, 
+  "events": {
+
+  }, 
+  "slots": {
+
+  }
+}

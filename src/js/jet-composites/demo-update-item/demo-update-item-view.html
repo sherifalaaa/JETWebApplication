@@ -1,0 +1,22 @@
+<!--
+  Copyright (c) 2015, 2018, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<oj-form-layout id="form-container">
+  <oj-label-value label-edge="start">
+    <oj-label slot="label">Item ID</oj-label>
+    <div slot="value" style="line-height: 2.4em">
+      <oj-bind-text value="[[$properties.itemId]]" style="width: 100%; min-width: 100%"></oj-bind-text>
+    </div>
+  </oj-label-value>
+  <oj-input-text value="{{$properties.itemName}}" label-hint="Item Name"></oj-input-text>
+  <oj-input-text value="{{$properties.itemPrice}}" 
+    help.instruction="enter an amount with or without grouping separator"
+    converter= '{
+     "type":"number", 
+     "options": {"style": "currency", "currency": "USD", 
+     "currencyDisplay": "code", "pattern": "¤ ##,##0.00"}}' label-hint="Item Price"></oj-input-text>
+  <oj-input-text value="{{$properties.itemDesc}}"
+    validators="[[validators]]" autocomplete="off"
+    placeholder="between 5-50 characters" label-hint="Item Description"></oj-input-text>
+</oj-form-layout>
